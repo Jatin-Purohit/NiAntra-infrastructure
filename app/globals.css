@@ -1,0 +1,184 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: 70 100% 98%;
+  --foreground: 70 100% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 70 100% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 70 100% 20%;
+  --primary: 260 100% 35%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 70 100% 92%;
+  --secondary-foreground: 70 100% 20%;
+  --muted: 70 100% 92%;
+  --muted-foreground: 70 100% 50%;
+  --accent: 40 100% 65%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 27.325 100% 57.7%;
+  --destructive-foreground: 27.325 100% 57.7%;
+  --border: 70 100% 92%;
+  --input: 70 100% 96%;
+  --ring: 260 100% 35%;
+  --chart-1: 41.116 100% 64.6%;
+  --chart-2: 184.704 100% 60%;
+  --chart-3: 227.392 100% 39.8%;
+  --chart-4: 84.429 100% 82.8%;
+  --chart-5: 70.08 100% 76.9%;
+  --radius: 0.625rem;
+  --sidebar: 0 0% 98.5%;
+  --sidebar-foreground: 0 0% 14.5%;
+  --sidebar-primary: 0 0% 20.5%;
+  --sidebar-primary-foreground: 0 0% 98.5%;
+  --sidebar-accent: 0 0% 97%;
+  --sidebar-accent-foreground: 0 0% 20.5%;
+  --sidebar-border: 0 0% 92.2%;
+  --sidebar-ring: 0 0% 70.8%;
+  --font-sans: "Geist", "Geist Fallback", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
+}
+
+.dark {
+  --background: 70 100% 12%;
+  --foreground: 70 100% 95%;
+  --card: 70 100% 18%;
+  --card-foreground: 70 100% 95%;
+  --popover: 70 100% 18%;
+  --popover-foreground: 70 100% 95%;
+  --primary: 260 100% 65%;
+  --primary-foreground: 70 100% 12%;
+  --secondary: 70 100% 25%;
+  --secondary-foreground: 70 100% 95%;
+  --muted: 70 100% 25%;
+  --muted-foreground: 70 100% 65%;
+  --accent: 40 100% 75%;
+  --accent-foreground: 70 100% 12%;
+  --destructive: 25.723 100% 39.6%;
+  --destructive-foreground: 25.331 100% 63.7%;
+  --border: 70 100% 25%;
+  --input: 70 100% 22%;
+  --ring: 260 100% 65%;
+  --chart-1: 264.376 100% 48.8%;
+  --chart-2: 162.48 100% 69.6%;
+  --chart-3: 70.08 100% 76.9%;
+  --chart-4: 303.9 100% 62.7%;
+  --chart-5: 16.439 100% 64.5%;
+  --sidebar: 0 0% 20.5%;
+  --sidebar-foreground: 0 0% 98.5%;
+  --sidebar-primary: 264.376 100% 48.8%;
+  --sidebar-primary-foreground: 0 0% 98.5%;
+  --sidebar-accent: 0 0% 26.9%;
+  --sidebar-accent-foreground: 0 0% 98.5%;
+  --sidebar-border: 0 0% 26.9%;
+  --sidebar-ring: 0 0% 43.9%;
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for animations and effects */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--accent)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .hover-lift:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
