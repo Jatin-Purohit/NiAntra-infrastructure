@@ -31,9 +31,9 @@ export default function Services() {
     },
     {
       icon: ClipboardList,
-      title: "Pre-Tender Geotech Investigation",
+      title: "Pre-Tender",
       description:
-        "Early-stage geotechnical and topographical studies to support project feasibility and tender documentation.",
+        "Preliminary site assessment and data collection carried out before tendering to support project feasibility, design assumptions, and tender documentation.",
     },
     {
       icon: Users,
@@ -73,19 +73,20 @@ export default function Services() {
       ],
     },
     {
-      title: "Pre-Tender Geotech Investigation",
+      title: "Pre-Tender Investigation",
       image: "/Projects/5.jpg",
       description:
-        "Early-stage geotechnical and topographical studies to support project feasibility, design evaluation, and tender documentation.",
+        "Preliminary site assessment and data collection carried out before tendering to support project feasibility, design assumptions, and tender documentation.",
       features: [
-        "Preliminary soil exploration",
         "Desk study and site reconnaissance",
-        "Feasibility-level soil and rock assessment",
+        "Preliminary soil and rock assessment",
+        "Hydrological and topographical review",
         "Preliminary foundation recommendations",
-        "Support for tender documentation",
+        "Tender-level geotechnical inputs",
         "Risk identification and mitigation advice",
       ],
     },
+
     {
       title: "Project Consultation",
       image: "/Projects/4.jpg",
@@ -100,6 +101,20 @@ export default function Services() {
         "Ongoing project advisory support",
       ],
     },
+    // {
+    //   title: "Geotechnical Investigation",
+    //   image: "/Projects/6.jpg",
+    //   description:
+    //     "Comprehensive subsurface exploration to determine soil and rock properties essential for safe and optimized structural and foundation design.",
+    //   features: [
+    //     "Borehole drilling and sampling",
+    //     "Standard penetration and cone penetration testing (SPT/CPT)",
+    //     "Laboratory soil and rock testing",
+    //     "Groundwater monitoring and analysis",
+    //     "Bearing capacity and settlement analysis",
+    //     "Detailed geotechnical investigation report (GIR)",
+    //   ],
+    // },
   ];
 
   return (
