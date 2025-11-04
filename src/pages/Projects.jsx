@@ -11,82 +11,48 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      category: "commercial",
-      image: "/modern-office-building-construction.jpg",
-      title: "Downtown Office Complex",
+      category: "railway",
+      image: "/Projects/5.jpg",
+      title: "Construction of New Broad Gauge Line",
       description:
-        "A 25-story mixed-use development with sustainable design features.",
-      location: "New York, NY",
+        "Construction of a new broad gauge railway line between Chainage 25.400 and 66.400 (41.000 km), including electrical, signal, and telecommunication works between Thimmarajanahalli (Excl.) and Tavarekere (Incl.) stations in the Tumkur–Chitradurga–Davangere section.",
+      location: "Karnataka, India",
     },
     {
       id: 2,
-      category: "infrastructure",
-      image: "/highway-bridge-infrastructure.jpg",
-      title: "Metropolitan Bridge",
+      category: "highway",
+      image: "/Projects/6.jpg",
+      title: "Upgradation of Kolde-Kalamba to Visarwadi Highway",
       description:
-        "Cable-stayed bridge spanning 2.5 km with innovative engineering.",
-      location: "San Francisco, CA",
+        "Construction and up-gradation of Kolde–Kalamba to Visarwadi (near junction of NH-6 Nandurbar–State Highway) section from Design Ch. Km 50+200 to Km 56+800 and Km 62+400 to Km 100+403 of NH-752G to two-lane with paved shoulder / four-lane configuration in Maharashtra on EPC basis.",
+      location: "Maharashtra, India",
     },
     {
       id: 3,
-      category: "residential",
-      image: "/residential-apartment-complex.jpg",
-      title: "Riverside Residences",
+      category: "infrastructure",
+      image: "/Projects/8.jpg",
+      title: "Vehicular Underpasses and Service Road Strengthening",
       description:
-        "Luxury residential complex with 500+ units and modern amenities.",
-      location: "Miami, FL",
+        "Construction of vehicular underpasses at Ch. 317+520 and Ch. 321+600, and widening and strengthening of the service road of NH-44 in Punjab on EPC mode.",
+      location: "Punjab, India",
     },
     {
       id: 4,
-      category: "commercial",
-      image: "/shopping-mall-retail-center.jpg",
-      title: "Central Shopping Mall",
+      category: "tunnel",
+      image: "/Projects/9.jpg",
+      title: "4-Lane Highway with Twin Tube Tunnel (NH-205)",
       description:
-        "State-of-the-art retail complex with integrated parking facilities.",
-      location: "Chicago, IL",
+        "Construction of a new 4-lane highway with paved shoulder from Dareota Village to Kalar Bala Village of NH-205 (Design Chainage Km 33+175 to Km 41+000, Design Length – 7.825 Km), including a twin tube tunnel, Package-IIB, in Himachal Pradesh under NH(O) on Hybrid Annuity Mode.",
+      location: "Himachal Pradesh, India",
     },
     {
       id: 5,
-      category: "infrastructure",
-      image: "/highway-road-construction.jpg",
-      title: "Interstate Highway Expansion",
+      category: "highway",
+      image: "/Projects/7.jpg",
+      title: "Service Road and Underpasses on NH-30 & NH-34",
       description:
-        "Major highway expansion project connecting three major cities.",
-      location: "Texas, USA",
-    },
-    {
-      id: 6,
-      category: "residential",
-      image: "/townhouse-development.jpg",
-      title: "Green Valley Townhouses",
-      description:
-        "Eco-friendly townhouse community with sustainable features.",
-      location: "Portland, OR",
-    },
-    {
-      id: 7,
-      category: "commercial",
-      image: "/hospital-medical-facility.jpg",
-      title: "Medical Research Center",
-      description:
-        "Advanced medical facility with cutting-edge laboratory spaces.",
-      location: "Boston, MA",
-    },
-    {
-      id: 8,
-      category: "infrastructure",
-      image: "/water-treatment-plant.jpg",
-      title: "Water Treatment Facility",
-      description: "Modern water treatment plant serving 500,000+ residents.",
-      location: "Los Angeles, CA",
-    },
-    {
-      id: 9,
-      category: "residential",
-      image: "/luxury-villa-estate.jpg",
-      title: "Luxury Villa Estate",
-      description: "Premium residential development with exclusive amenities.",
-      location: "Miami Beach, FL",
+        "Construction of new service roads and underpasses at various locations on the Rewa–Katni–Jabalpur section (Km 813+257 to Km 880+600, Pkg-4) and Jabalpur–Lakhnadon section (Km 880+600 to Km 891+780 of NH-30 and Km 1358+000 to Km 1428+557 of NH-34) in Madhya Pradesh on EPC mode.",
+      location: "Madhya Pradesh, India",
     },
   ];
 
@@ -108,7 +74,7 @@ export default function Projects() {
       <HeroSection
         title="Our Portfolio"
         subtitle="Showcasing our most impressive and innovative projects across diverse sectors."
-        backgroundImage="/construction-site-portfolio-projects.jpg"
+        backgroundImage="/Projects/13.png"
       />
 
       {/* Projects Section */}
@@ -162,10 +128,10 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "50+", label: "Team Members" },
-              { number: "25+", label: "Years Experience" },
-              { number: "1000+", label: "Happy Clients" },
+              { number: "5+", label: "Projects Completed" },
+              { number: "20+", label: "Team Members" },
+              { number: "8+", label: "Months Experience" },
+              { number: "10+", label: "Happy Clients" },
             ].map((stat, idx) => (
               <motion.div
                 key={idx}

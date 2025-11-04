@@ -1,47 +1,16 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import { ChevronUp } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+// src/components/ScrollToTop.jsx
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false)
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
-    }
-
-    window.addEventListener("scroll", toggleVisibility)
-    return () => window.removeEventListener("scroll", toggleVisibility)
-  }, [])
-
-  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
-    })
-  }
+      behavior: "smooth", // optional: remove if you want instant jump
+    });
+  }, [pathname]);
 
-  return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-blue-600 to-orange-500 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow z-40"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <ChevronUp size={24} />
-        </motion.button>
-      )}
-    </AnimatePresence>
-  )
+  return null;
 }

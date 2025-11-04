@@ -1,96 +1,103 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Briefcase,
-  Users,
-  Award,
-  Zap,
-  Building2,
-  Hammer,
-  BarChart3,
-  Shield,
-} from "lucide-react";
+// import {
+//   Briefcase,
+//   Users,
+//   Award,
+//   Zap,
+//   Building2,
+//   Hammer,
+//   BarChart3,
+//   Shield,
+// } from "lucide-react";
+import { ArrowRight, Map, Layers, ClipboardList, Users } from "lucide-react";
 import HeroSection from "../components/HeroSection";
 import ServiceCard from "../components/ServiceCard";
 
 export default function Services() {
   const mainServices = [
     {
-      icon: Briefcase,
-      title: "Structural Design",
+      icon: Map,
+      title: "Geotechnical Investigation",
       description:
-        "Advanced structural analysis and design for residential, commercial, and industrial projects using latest engineering standards.",
+        "Comprehensive subsurface investigations to determine soil and rock properties essential for safe and reliable structural design.",
+    },
+    {
+      icon: Layers,
+      title: "Topographical Survey",
+      description:
+        "Accurate terrain mapping and contour analysis using modern surveying technologies to ensure precise project planning and execution.",
+    },
+    {
+      icon: ClipboardList,
+      title: "Pre-Tender Geotech Investigation",
+      description:
+        "Early-stage geotechnical and topographical studies to support project feasibility and tender documentation.",
     },
     {
       icon: Users,
-      title: "Project Management",
+      title: "Project Consultation",
       description:
-        "Expert project coordination ensuring timely delivery, budget optimization, and stakeholder satisfaction.",
-    },
-    {
-      icon: Award,
-      title: "Construction Supervision",
-      description:
-        "On-site supervision and quality assurance for all construction phases with rigorous compliance monitoring.",
-    },
-    {
-      icon: Zap,
-      title: "BIM Modelling",
-      description:
-        "Building Information Modeling for enhanced project visualization, coordination, and clash detection.",
-    },
-    {
-      icon: Building2,
-      title: "Infrastructure Development",
-      description:
-        "Comprehensive infrastructure solutions including roads, bridges, utilities, and public facilities.",
-    },
-    {
-      icon: Hammer,
-      title: "Renovation & Rehabilitation",
-      description:
-        "Expert assessment and renovation of existing structures to extend lifespan and improve functionality.",
-    },
-    {
-      icon: BarChart3,
-      title: "Feasibility Studies",
-      description:
-        "Detailed technical and financial feasibility analysis for proposed projects and developments.",
-    },
-    {
-      icon: Shield,
-      title: "Safety & Compliance",
-      description:
-        "Comprehensive safety planning and regulatory compliance for all project phases and operations.",
+        "Expert consultation and project assessment services to guide clients from initial concept through successful implementation.",
     },
   ];
 
   const serviceDetails = [
     {
-      title: "Structural Design",
+      title: "Geotechnical Investigation",
+      image: "/Projects/2.jpg",
       description:
-        "Our structural design team utilizes advanced software and methodologies to create safe, efficient, and innovative structures.",
+        "Comprehensive subsurface investigations to determine soil and rock properties essential for safe and reliable structural and infrastructure design.",
       features: [
-        "Seismic and wind analysis",
-        "Foundation design",
-        "Steel and concrete design",
-        "Geotechnical investigation",
-        "Load calculations",
-        "CAD documentation",
+        "Soil sampling and laboratory testing",
+        "Borehole drilling and SPT analysis",
+        "Rock coring and strength evaluation",
+        "Groundwater level observation",
+        "Foundation recommendation reports",
+        "Geotechnical data interpretation",
       ],
     },
     {
-      title: "Project Management",
+      title: "Topographical Survey",
+      image: "/Projects/1.jpg",
       description:
-        "We manage projects from conception to completion, ensuring quality, schedule, and budget adherence.",
+        "Accurate terrain mapping and contour analysis using modern surveying technologies to ensure precise project planning and execution.",
       features: [
-        "Project planning and scheduling",
-        "Resource allocation",
-        "Risk management",
-        "Cost control",
-        "Stakeholder communication",
-        "Quality assurance",
+        "DGPS and Total Station surveys",
+        "Contour and elevation mapping",
+        "Boundary and alignment surveys",
+        "Route and corridor mapping",
+        "Digital terrain modeling (DTM)",
+        "Survey data processing and plotting",
+      ],
+    },
+    {
+      title: "Pre-Tender Geotech Investigation",
+      image: "/Projects/5.jpg",
+      description:
+        "Early-stage geotechnical and topographical studies to support project feasibility, design evaluation, and tender documentation.",
+      features: [
+        "Preliminary soil exploration",
+        "Desk study and site reconnaissance",
+        "Feasibility-level soil and rock assessment",
+        "Preliminary foundation recommendations",
+        "Support for tender documentation",
+        "Risk identification and mitigation advice",
+      ],
+    },
+    {
+      title: "Project Consultation",
+      image: "/Projects/4.jpg",
+      description:
+        "Expert consultation and technical assessment services to guide clients from conceptual planning through detailed execution.",
+      features: [
+        "Technical feasibility studies",
+        "Design and methodology review",
+        "Project cost and schedule assessment",
+        "Value engineering recommendations",
+        "Regulatory and compliance guidance",
+        "Ongoing project advisory support",
       ],
     },
   ];
@@ -164,9 +171,11 @@ export default function Services() {
                 </div>
                 <div>
                   <img
-                    src={`/.jpg?height=400&width=500&query=${service.title.toLowerCase()} engineering`}
+                    src={service.image}
                     alt={service.title}
-                    className="rounded-xl shadow-lg"
+                    width={500}
+                    height={400}
+                    className="rounded-xl shadow-lg object-cover"
                   />
                 </div>
               </div>

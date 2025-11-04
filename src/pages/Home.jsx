@@ -38,25 +38,27 @@ export default function Home() {
 
   const featuredProjects = [
     {
-      image: "/geotech-drilling-site.jpg",
-      title: "Highway Geotechnical Survey",
+      image: "/Projects/1.jpg",
+      title: "Construction of New Broad Gauge Line",
       description:
-        "Detailed soil testing and topography mapping for a national highway corridor to support design and safety standards.",
-      location: "Himachal Pradesh, India",
+        "Construction of a new broad gauge railway line between Chainage 25.400 and Chainage 66.400 (41.000 km), including electrical, signal, and telecommunication works between Thimmarajanahalli (Excl.) and Tavarekere (Incl.) stations in the Tumkur–Chitradurga–Davangere section.",
+      location: "Karnataka, India",
+    },
+
+    {
+      image: "/Projects/2.jpg",
+      title: "Upgradation of Kolde-Kalamba to Visarwadi Highway",
+      description:
+        "Construction and up-gradation of the Kolde-Kalamba to Visarwadi (near junction of NH-6 Nandurbar–State Highway) section from Design Ch. Km 50+200 to Km 56+800 and Km 62+400 to Km 100+403 of NH-752G to two-lane with paved shoulder / four-lane configuration in Maharashtra on Engineering, Procurement & Construction (EPC) basis.",
+      location: "Maharashtra, India",
     },
     {
-      image: "/topography-survey-drone.jpg",
-      title: "Urban Topography Mapping",
+      image: "/Projects/3.jpg",
+      title:
+        "Construction of Vehicular Underpasses and Service Road Strengthening",
       description:
-        "Advanced drone-assisted topographical survey for urban development and infrastructure planning.",
-      location: "Shimla, Himachal Pradesh",
-    },
-    {
-      image: "/construction-geotech-investigation.jpg",
-      title: "Pre-Tender Investigation for Bridge Project",
-      description:
-        "Comprehensive pre-tender soil and rock testing for a major bridge construction proposal.",
-      location: "Hamirpur, Himachal Pradesh",
+        "Construction of vehicular underpasses at Ch. 317+520 and Ch. 321+600, along with widening and strengthening of the service road of NH-44 in the state of Punjab on EPC mode.",
+      location: "Punjab, India",
     },
   ];
 
@@ -114,10 +116,10 @@ export default function Home() {
       <section className="py-16 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <StatCounter end={10} label="Years of Experience" delay={0} />
-            <StatCounter end={200} label="Projects Completed" delay={0.1} />
-            <StatCounter end={100} label="Clients Served" delay={0.2} />
-            <StatCounter end={25} label="Expert Team Members" delay={0.3} />
+            <StatCounter end={8} label="Months of Experience" delay={0} />
+            <StatCounter end={20} label="Projects Completed" delay={0.1} />
+            <StatCounter end={10} label="Clients Served" delay={0.2} />
+            <StatCounter end={10} label="Expert Team Members" delay={0.3} />
           </div>
         </div>
       </section>
@@ -133,7 +135,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <img
-                src="/ni-antra-team-survey.jpg"
+                src="/Projects/2.jpg"
                 alt="About NiAntra Infrastructure"
                 className="rounded-xl shadow-lg"
               />
@@ -273,13 +275,15 @@ export default function Home() {
           >
             Galore, District Hamirpur, Himachal Pradesh — PIN 177026
           </motion.div>
-          <motion.button
-            className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Us Now
-          </motion.button>
+          <Link to="/contact">
+            <motion.button
+              className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us Now
+            </motion.button>
+          </Link>
         </div>
       </section>
     </div>

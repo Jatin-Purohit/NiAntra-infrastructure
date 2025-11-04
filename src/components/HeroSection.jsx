@@ -1,8 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-export default function HeroSection({ title, subtitle, backgroundImage, children }) {
+export default function HeroSection({
+  title,
+  subtitle,
+  backgroundImage,
+  children,
+}) {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -39,5 +44,5 @@ export default function HeroSection({ title, subtitle, backgroundImage, children
         {children}
       </div>
     </div>
-  )
+  );
 }

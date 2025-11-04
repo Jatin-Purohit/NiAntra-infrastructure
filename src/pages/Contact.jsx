@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import HeroSection from "../components/HeroSection";
+import { WhatsAppContact } from "../components/whatsapp-contact";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -47,20 +48,20 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+918637090587 +919814284447 ",
       subtext: "Mon-Fri, 9AM-6PM EST",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@NiAntraInfrastructures.com",
+      details: "info@niantra.com",
       subtext: "We respond within 24 hours",
     },
     {
       icon: MapPin,
       title: "Address",
-      details: "123 Engineering Street",
-      subtext: "Tech City, TC 12345",
+      details: "Galore dist - Hamirpur Himachal Pradesh",
+      subtext: "Pin code  177026",
     },
   ];
 
@@ -107,7 +108,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -187,7 +188,8 @@ export default function Contact() {
                   <Send size={20} />
                 </motion.button>
               </form>
-            </motion.div>
+            </motion.div> */}
+            <WhatsAppContact />
 
             {/* Map Section */}
             <motion.div
@@ -198,7 +200,7 @@ export default function Contact() {
             >
               <div className="rounded-xl overflow-hidden shadow-lg h-full min-h-96">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3855555%3A0x1c0b82a00eae42b!2s123%20Engineering%20St%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54354.513087858744!2d76.4311912!3d31.6295496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b2aaad8cebf5b%3A0x3959aaaeef5915aa!2sGalore%20Market!5e0!3m2!1sen!2sin!4v1762237302412!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -10,11 +10,11 @@ export default function Blog() {
       id: 1,
       title: "The Future of Sustainable Infrastructure",
       excerpt:
-        "Exploring how green building practices and sustainable materials are revolutionizing the construction industry.",
+        "Exploring how slate building practices and sustainable materials are revolutionizing the construction industry.",
       author: "Dr. Robert Anderson",
       date: "March 15, 2024",
       category: "Sustainability",
-      image: "/sustainable-green-building.jpg",
+      image: "/sustainable-slate-building.jpg",
       readTime: "5 min read",
     },
     {

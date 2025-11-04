@@ -20,20 +20,20 @@ export default function Footer() {
       { name: "About Us", path: "/about" },
       { name: "Services", path: "/services" },
       { name: "Projects", path: "/projects" },
-      { name: "Blog", path: "/blog" },
+      // { name: "Blog", path: "/blog" },
     ],
-    Resources: [
-      { name: "Documentation", path: "#" },
-      { name: "Case Studies", path: "#" },
-      { name: "Guides", path: "#" },
-      { name: "FAQ", path: "#" },
-    ],
-    Legal: [
-      { name: "Privacy Policy", path: "#" },
-      { name: "Terms of Service", path: "#" },
-      { name: "Cookie Policy", path: "#" },
-      { name: "Disclaimer", path: "#" },
-    ],
+    // Resources: [
+    //   { name: "Documentation", path: "#" },
+    //   { name: "Case Studies", path: "#" },
+    //   { name: "Guides", path: "#" },
+    //   { name: "FAQ", path: "#" },
+    // ],
+    // Legal: [
+    //   { name: "Privacy Policy", path: "#" },
+    //   { name: "Terms of Service", path: "#" },
+    //   { name: "Cookie Policy", path: "#" },
+    //   { name: "Disclaimer", path: "#" },
+    // ],
   };
 
   const socialLinks = [
@@ -47,7 +47,8 @@ export default function Footer() {
     <footer className="bg-slate-900 dark:bg-slate-950 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12"> */}
+        <div className="flex justify-between gap-8 mb-12">
           {/* Brand Section */}
           <motion.div
             className="lg:col-span-1"
@@ -56,11 +57,15 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
+            <div className="w-full flex items-center gap-2 mb-4">
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">CE</span>
-              </div>
-              <span className="font-bold text-lg">NiAntraInfrastructures</span>
+              </div> */}
+              {/* <div className=" w-40 h-40 rounded-lg flex items-center justify-center"> */}
+              {/* <span className="text-white font-bold text-lg">CE</span> */}
+              <img src="/logo/logo.png" alt="" className="w-48 h-48" />
+              {/* </div> */}
+              {/* <span className="font-bold text-lg">NiAntraInfrastructures</span> */}
             </div>
             <p className="text-slate-400 text-sm">
               Building the future with precision and innovation.
@@ -103,15 +108,17 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-orange-500" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 (862) 709-0587</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-orange-500" />
-                <span>info@NiAntraInfrastructures.com</span>
+                <span>info@niantra.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={16} className="text-orange-500" />
-                <span>123 Engineering St, Tech City</span>
+                <span>
+                  Galore dist - Hamirpur Himachal Pradesh Pin code  177026
+                </span>
               </div>
             </div>
           </motion.div>

@@ -126,7 +126,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-800">
+      {/* <section className="py-20 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             className="text-4xl font-bold text-slate-900 dark:text-white text-center mb-16"
@@ -139,10 +139,8 @@ export default function About() {
           </motion.h2>
 
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 to-orange-500"></div>
 
-            {/* Timeline items */}
             <div className="space-y-12">
               {timeline.map((item, idx) => (
                 <motion.div
@@ -189,7 +187,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Values */}
       <section className="py-20 bg-white dark:bg-slate-900">
@@ -233,7 +231,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-800">
+      {/* <section className="py-20 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             className="text-4xl font-bold text-slate-900 dark:text-white text-center mb-16"
@@ -271,7 +269,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
