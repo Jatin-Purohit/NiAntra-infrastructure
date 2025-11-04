@@ -24,9 +24,9 @@ export default function Home() {
     },
     {
       icon: ClipboardList,
-      title: "Pre-Tender Geotech Investigation",
+      title: "Pre-Tender",
       description:
-        "Early-stage geotechnical and topographical studies to support project feasibility and tender documentation.",
+        "Preliminary site assessment and data collection carried out before tendering to support project feasibility, design assumptions, and tender documentation.",
     },
     {
       icon: Users,
